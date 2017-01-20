@@ -39,7 +39,8 @@
     	slides: [
        	{ src: "images/slides/03.jpg" },
         	{ src: "images/slides/02.jpg" },
-        	{ src: "images/slides/01.jpg" }
+        	{ src: "images/slides/01.jpg" },
+        	{ src: "images/slides/04.jpg" }
     	]
 	});
 
