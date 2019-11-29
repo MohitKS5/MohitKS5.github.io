@@ -13,16 +13,22 @@
 	/* Preloader
 	------------------------------------------------------ */ 
    $(window).load(function() {
-      // will first fade out the loading animation 
-    	$("#loader").fadeOut("slow", function(){
+   	//colors();
+      // will first fade out the loading animation
+    	$("#preloader").delay(1000).animate({
+            opacity: 0,
+			display: "none"
+        }, 500, function() {
 
         // will fade out the whole DIV that covers the website.
-        $("#preloader").delay(300).fadeOut("slow");
+        $("#loader").fadeOut("fast");
 
-      }); 
+      }).fadeOut('fast');
   	})
 
-
+  function colors(){
+  	$(".object:nth-child(5)").css({"background-color":"red"});
+}
   	/*---------------------------------------------------- */
 	/* FitVids
 	------------------------------------------------------ */ 
@@ -40,7 +46,7 @@
        	{ src: "images/slides/03.jpg" },
         	{ src: "images/slides/02.jpg" },
         	{ src: "images/slides/01.jpg" },
-        	{ src: "images/slides/04.jpg" }
+        	{ src: "images/slides/04.jpg"}
     	]
 	});
 
@@ -50,12 +56,12 @@
 	------------------------------------------------------ */
 	$('.home-particles').particleground({
 	   dotColor: '#fff',
-	   lineColor: '#555555',
+	   lineColor: '#ccc',
 	   particleRadius: 10,
 	   curveLines: true,
 	   density: 10000,
 	   proximity: 110
-	}); 
+	});
 
 
 	/*-----------------------------------------------------*/
