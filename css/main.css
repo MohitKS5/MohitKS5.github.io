@@ -538,10 +538,6 @@ select {
     transition: all 0.3s ease-in-out;
 }
 
-textarea {
-    max-height: 10rem;
-}
-
 input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
@@ -550,14 +546,13 @@ input[type="tel"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus {
-
     color: #bbbbbb;
     border-color: #034e4a;
-    background-color: #000000;
+    background-color: rgba(0,0,0,0.1);
 }
 
-textarea:focus {
-    min-height: 25rem;
+#contactMessage {
+    height: 20vh;
 }
 
 select:focus {
@@ -1641,7 +1636,7 @@ header .social-links ul li a:focus {
 }
 
 .form-wrap:hover {
-    background-color: black;
+    background-color: rgba(0,0,0,0.1);
 }
 
 #info .row .form-wrap .form-field {
