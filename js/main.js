@@ -17,9 +17,9 @@ function mainScript($) {
 		transitionDuration: 2500,
 		delay: 5000,
 		slides: [
-			{src: 'images/slides/03.jpg'},
-			{src: 'images/slides/02.jpg'},
 			{src: 'images/slides/01.jpg'},
+			{src: 'images/slides/02.jpg'},
+			{src: 'images/slides/03.jpg'},
 			{src: 'images/slides/04.jpg'}
 		]
 	});
@@ -32,8 +32,8 @@ function mainScript($) {
 		lineColor: '#ccc',
 		particleRadius: 10,
 		curveLines: true,
-		density: 10000,
-		proximity: 110
+		density: 20000,
+		proximity: 110,
 	});
 }
 
@@ -46,17 +46,28 @@ function mainScript($) {
 	/* Preloader
 	------------------------------------------------------ */
 	$(window).load(function () {
-		//colors();
-		// will first fade out the loading animation
-		$('#preloader').delay(1000).animate({
-			opacity: 0,
-			display: 'none'
-		}, 500, function () {
+		const preload = ["images/home.jpg"];
+		const promises = [];
+		for (let i = 0; i < preload.length; i++) {
+			(function(url, promise) {
+				const img = new Image();
+				img.onload = function() {
+					promise.resolve();
+				};
+				img.src = url;
+			})(preload[i], promises[i] = $.Deferred());
+		}
+		$.when.apply($, promises).done(function() {
+			$('#preloader').delay(100).animate({
+				opacity: 0,
+				display: 'none'
+			}, 500, function () {
 
-			// will fade out the whole DIV that covers the website.
-			$('#loader').fadeOut('fast');
+				// will fade out the whole DIV that covers the website.
+				$('#loader').fadeOut('fast');
 
-		}).fadeOut('fast');
+			}).fadeOut('fast');
+		});
 	})
 
 	function colors() {
@@ -120,22 +131,17 @@ function mainScript($) {
 		});
 })(jQuery)
 
+let particles = true
 function ToggleHomeClass($) {
 	/*---------------------------------------------------- */
 	/*Toggle Home Class
 	------------------------------------------------------ */
 	const $homeWrapper = $('#home-background')
-	const $particleScreen = $('#particleScreen')
-	const $slideScreen = $('#slideScreen')
-	$particleScreen.click(function () {
-		$homeWrapper.html('<div class="home-particles"></div>')
+	const $btn = $('#button-7')
+	$btn.click(function () {
+		particles = !particles
+		$homeWrapper.html(particles ? '<div class="home-particles"></div>' : '<div class="home-slides"></div>')
 		mainScript(jQuery);
-
-	})
-	$slideScreen.click(function () {
-		$homeWrapper.html('<div class="home-slides"></div>')
-		mainScript(jQuery);
-
 	})
 }
 

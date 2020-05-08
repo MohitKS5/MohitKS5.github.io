@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c1af97a8-755c-4a36-be9e-ecbdad080bb4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/click.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/ABOUT ME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/sendEmail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slides/01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/slides/01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slides/02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/slides/02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slides/03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/slides/03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slides/04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/slides/04.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/plugins.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,12 +52,24 @@
       <option name="presentableId" value="Default" />
       <updated>1575003502471</updated>
       <workItem from="1575003503643" duration="2796000" />
-      <workItem from="1588944743533" duration="11061000" />
+      <workItem from="1588944743533" duration="17768000" />
     </task>
+    <task id="LOCAL-00001" summary="clean useless page click.html">
+      <created>1588956056284</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588956056284</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="clean useless page click.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean useless page click.html" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588944834834">
@@ -68,6 +80,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1588951356694" />
+    <state x="393" y="26" key="CommitChangelistDialog2" timestamp="1588963995792">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="393" y="26" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1588963995792" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1588963839219">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1588963839219" />
     <state x="93" y="93" width="1350" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588951574968">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
