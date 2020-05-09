@@ -150,7 +150,8 @@ h6, .h06 {
 .blackbg {
     color: yellow;
 }
-.blackbg a{
+
+.blackbg a {
     color: lightsalmon;
 }
 
@@ -208,7 +209,7 @@ blockquote {
 blockquote:before {
     content: "\201C";
     font-size: 8rem;
-    line-height: 0px;
+    line-height: 0;
     margin: 0;
     color: #333;
     font-family: arial, sans-serif;
@@ -361,9 +362,6 @@ dd {
 /* ------------------------------------------------------------------- 
  * Spacing
  * ------------------------------------------------------------------- */
-button, .button {
-    margin-bottom: 1.2;
-}
 
 fieldset {
     margin-bottom: 1.5rem;
@@ -548,7 +546,7 @@ input[type="password"]:focus,
 textarea:focus {
     color: #bbbbbb;
     border-color: #034e4a;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 #contactMessage {
@@ -701,7 +699,7 @@ button.large,
 .button.large {
     height: 6rem !important;
     line-height: 6rem !important;
-    padding: 0rem 3rem !important;
+    padding: 0 3rem !important;
 }
 
 button.stroke,
@@ -817,14 +815,14 @@ input::-moz-focus-inner {
  * --------------------------------------------------------------------- */
 .pull-quote {
     position: relative;
-    padding: 2.1rem 3rem 2.1rem 0px;
+    padding: 2.1rem 3rem 2.1rem 0;
 }
 
 .pull-quote:before, .pull-quote:after {
     height: 1em;
     position: absolute;
     font-size: 8rem;
-    font-family: Arial, Sans-Serif;
+    font-family: Arial, Sans-Serif, serif;
     color: #333;
 }
 
@@ -927,6 +925,7 @@ header .logo {
     top: 0;
     margin-top: 78px;
 }
+
 #button-7 {
     display: inline-flex;
     height: 40px;
@@ -934,7 +933,7 @@ header .logo {
     border: 2px solid #BFC0C0;
     margin: 20px 20px 20px 20px;
     color: #BFC0C0;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     text-transform: uppercase;
     text-decoration: none;
     font-size: .8em;
@@ -949,6 +948,7 @@ header .logo {
     text-decoration: none;
     letter-spacing: 1px;
 }
+
 /* Theme changer button */
 /* Seventh Button */
 
@@ -1065,8 +1065,7 @@ header .social-links ul li a:focus {
 
 @media only screen and (max-width: 768px) {
     header .logo {
-        left: 51px;
-        margin-top: 36px;
+        display: none;
     }
 
     header .social-links {
@@ -1076,11 +1075,6 @@ header .social-links ul li a:focus {
 }
 
 @media only screen and (max-width: 600px) {
-    header .logo {
-        left: 41px;
-        margin-top: 30px;
-    }
-
     header .social-links {
         right: 41px;
         top: 42px;
@@ -1092,10 +1086,6 @@ header .social-links ul li a:focus {
 }
 
 @media only screen and (max-width: 500px) {
-    header .logo {
-        left: 35px;
-    }
-
     header .social-links {
         right: 35px;
     }
@@ -1110,11 +1100,6 @@ header .social-links ul li a:focus {
 }
 
 @media only screen and (max-width: 380px) {
-    header .logo {
-        left: 30px;
-        margin-top: 30px;
-    }
-
     header .social-links ul {
         font-size: 2rem;
     }
@@ -1137,7 +1122,8 @@ header .social-links ul li a:focus {
     z-index: 600;
     position: relative;
 }
-#home-background{
+
+#home-background {
     left: 0;
     right: 0;
     top: 0;
@@ -1145,10 +1131,12 @@ header .social-links ul li a:focus {
     overflow: hidden;
     position: absolute;
 }
+
 #home-background .home-slides {
     width: 100%;
     height: 100%;
 }
+
 #home-background .home-particles {
     width: 100%;
     height: 100%;
@@ -1158,6 +1146,7 @@ header .social-links ul li a:focus {
     background-position: center center;
     background-size: cover;
 }
+
 #home-background .home-particles::after {
     content: "";
     background: -webkit-gradient(linear, right top, left top, from(#009688), to(#00152e));
@@ -1214,7 +1203,7 @@ header .social-links ul li a:focus {
 
 @media (max-width: 600px) {
     .content-wrap-table {
-        /*padding-bottom: 10vh;*/
+        padding-bottom: 5vh;
     }
 }
 
@@ -1470,11 +1459,7 @@ header .social-links ul li a:focus {
  *
  * ------------------------------------------------------------------- */
 #info {
-    background: #FFFFFF;
-    background-image: url(../images/tech3.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: #FFFFFF url(../images/tech3.jpg) no-repeat fixed center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -1561,9 +1546,11 @@ header .social-links ul li a:focus {
     padding: 3rem 0;
     display: none;
 }
+
 #info .tabs-wrap #tab-about {
     padding: 20vh 0;
 }
+
 #info .tabs-wrap .tab-entry-intro {
     max-width: 700px;
     text-align: center;
@@ -1606,7 +1593,7 @@ header .social-links ul li a:focus {
 }
 
 .form-wrap:hover {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 #info .row .form-wrap .form-field {
@@ -1644,6 +1631,7 @@ header .social-links ul li a:focus {
     #info .tabs-wrap ul.tabs li:not(:last-child) span {
         display: none;
     }
+
     #info .tabs-wrap ul.tabs li:last-child span {
         margin-left: 1rem
     }
@@ -1808,7 +1796,7 @@ header .social-links ul li a:focus {
     left: -5px;
     top: 50%;
     margin-top: -6px;
-    border -top: 5px solid transparent;
+    border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
     border-right: 5px solid #034e4a;
     content: "";
@@ -2232,40 +2220,46 @@ footer .back-to-top a i {
 
 /* total width */
 ::-webkit-scrollbar {
-    background-color:#fff;
-    width:6px
+    background-color: #fff;
+    width: 6px
 }
 
 /* background of the scrollbar except button or resizer */
 ::-webkit-scrollbar-track {
-    background-color:#c0c9fb;
+    background-color: #c0c9fb;
 }
+
 ::-webkit-scrollbar-track:hover {
-    background-color:#c0c9fb
+    background-color: #c0c9fb
 }
 
 /* scrollbar itself */
 ::-webkit-scrollbar-thumb {
-    background-color:#1c6795;
-    border-radius:16px;
+    background-color: #1c6795;
+    border-radius: 16px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-    background-color:#4e5fc5;
+    background-color: #4e5fc5;
 }
 
 /* set button(top and bottom of the scrollbar) */
-::-webkit-scrollbar-button {display: none}
-
-.w3-progress-container{
-  overflow: hidden;
+::-webkit-scrollbar-button {
+    display: none
 }
+
+.w3-progress-container {
+    overflow: hidden;
+}
+
 .w3-progressbar {
-    animation: 2s cubic-bezier(.14,.96,.68,.96) 0s 1 slideInFromLeft;
+    animation: 2s cubic-bezier(.14, .96, .68, .96) 0s 1 slideInFromLeft;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%);
