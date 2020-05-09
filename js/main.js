@@ -45,30 +45,28 @@ function mainScript($) {
 	/* --------------------------------------------------- */
 	/* Preloader
 	------------------------------------------------------ */
-	$(window).load(function () {
-		const preload = ["images/home.jpg"];
-		const promises = [];
-		for (let i = 0; i < preload.length; i++) {
-			(function(url, promise) {
-				const img = new Image();
-				img.onload = function() {
-					promise.resolve();
-				};
-				img.src = url;
-			})(preload[i], promises[i] = $.Deferred());
-		}
-		$.when.apply($, promises).done(function() {
-			$('#preloader').delay(100).animate({
-				opacity: 0,
-				display: 'none'
-			}, 500, function () {
+	const preload = ['images/home.jpg'];
+	const promises = [];
+	for (let i = 0; i < preload.length; i++) {
+		(function (url, promise) {
+			const img = new Image();
+			img.onload = function () {
+				promise.resolve();
+			};
+			img.src = url;
+		})(preload[i], promises[i] = $.Deferred());
+	}
+	$.when.apply($, promises).done(function () {
+		$('#preloader').delay(100).animate({
+			opacity: 0,
+			display: 'none'
+		}, 500, function () {
 
-				// will fade out the whole DIV that covers the website.
-				$('#loader').fadeOut('fast');
+			// will fade out the whole DIV that covers the website.
+			$('#loader').fadeOut('fast');
 
-			}).fadeOut('fast');
-		});
-	})
+		}).fadeOut('fast');
+	});
 
 	function colors() {
 		$('.object:nth-child(5)').css({'background-color': 'red'});
@@ -132,6 +130,7 @@ function mainScript($) {
 })(jQuery)
 
 let particles = true
+
 function ToggleHomeClass($) {
 	/*---------------------------------------------------- */
 	/*Toggle Home Class
