@@ -11,7 +11,7 @@
  *  07. other components
  *  08. header styles
  *  09. home
- *  10. info
+ *  10. Tab info
  *  11. cta
  *  12. footer
  *  13. Scroll bar
@@ -42,18 +42,6 @@ html {
 @media only screen and (max-width: 768px) {
     html {
         font-size: 8px;
-    }
-}
-
-@media only screen and (max-width: 550px) {
-    html {
-        font-size: 6px;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    html {
-        font-size: 4px;
     }
 }
 
@@ -1194,17 +1182,15 @@ header .social-links ul li a:focus {
     display: none;
 }
 
+#home .bottom-text {
+    font-size: 7rem;
+}
+
 .content-wrap-table {
     width: 100%;
     height: 100%;
     display: table;
     position: relative;
-}
-
-@media (max-width: 600px) {
-    .content-wrap-table {
-        padding-bottom: 5vh;
-    }
 }
 
 .main-content-tablecell {
@@ -1242,7 +1228,7 @@ header .social-links ul li a:focus {
     text-align: right;
     color: #FFFFFF;
     font-family: "roboto-black", sans-serif;
-    font-size: 5rem !important;
+    font-size: 5rem;
     line-height: 1;
     padding: 0;
     margin-bottom: 1.5rem;
@@ -1269,7 +1255,10 @@ header .social-links ul li a:focus {
     color: rgba(255, 255, 255, 0.3);
     font-family: "roboto-regular", sans-serif;
     font-size: 2rem;
-    max-width: 400px;
+}
+
+#home .bottom-text p {
+    padding-top: 1.5rem;
 }
 
 .scroll-icon {
@@ -1363,10 +1352,6 @@ header .social-links ul li a:focus {
     .main-content-tablecell #counter {
         margin-bottom: 2.4rem;
     }
-
-    .main-content-tablecell #counter span {
-        font-size: 11rem;
-    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1382,10 +1367,6 @@ header .social-links ul li a:focus {
 @media only screen and (max-width: 768px) {
     .main-content-tablecell #counter {
         margin-bottom: 1.2rem;
-    }
-
-    .main-content-tablecell #counter span {
-        font-size: 10.4rem;
     }
 
     .main-content-tablecell .row {
@@ -1410,12 +1391,16 @@ header .social-links ul li a:focus {
 }
 
 @media only screen and (max-width: 600px) {
-    .main-content-tablecell #counter {
-        margin-bottom: .9rem;
+    .content-wrap-table {
+        padding-bottom: 5vh;
     }
 
-    .main-content-tablecell #counter span {
-        font-size: 8.4rem;
+    #home .bottom-text {
+        font-size: 5rem;
+    }
+
+    .main-content-tablecell #counter {
+        margin-bottom: .9rem;
     }
 
     .main-content-tablecell h1 {
@@ -1424,8 +1409,17 @@ header .social-links ul li a:focus {
 }
 
 @media only screen and (max-width: 500px) {
+    #home .bottom-text {
+        font-size: 4rem;
+    }
     .main-content-tablecell #counter span {
-        font-size: 7.2rem;
+        font-size: 4rem;
+        margin-bottom: .9rem;
+    }
+
+    .main-content-tablecell #counter span sup {
+        font-size: 1.3rem;
+        top: -2.3em;
     }
 }
 
@@ -1435,17 +1429,28 @@ header .social-links ul li a:focus {
     }
 
     .main-content-tablecell #counter span {
-        font-size: 6rem;
+        font-size: 3.6rem;
         margin-bottom: .9rem;
     }
 
     .main-content-tablecell #counter span sup {
-        font-size: .2em;
-        top: -2.8em;
+        font-size: 1.5rem;
+        top: -2.5em;
     }
 
     .main-content-tablecell h1 {
         font-size: 2.4rem;
+    }
+}
+@media only screen and (max-width: 330px) {
+    .main-content-tablecell #counter span {
+        font-size: 3rem;
+        margin-bottom: .9rem;
+    }
+
+    .main-content-tablecell #counter span sup {
+        font-size: 1rem;
+        top: -2.5em;
     }
 }
 
@@ -1455,7 +1460,7 @@ header .social-links ul li a:focus {
 
 
 /* ===================================================================
- * 10. info - (_layout.scss)
+ * 10. Tab info - (_layout.scss)
  *
  * ------------------------------------------------------------------- */
 #info {
@@ -1548,6 +1553,11 @@ header .social-links ul li a:focus {
 }
 
 #info .tabs-wrap #tab-about {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: pre-wrap;
     padding: 20vh 0;
 }
 
@@ -1678,20 +1688,8 @@ header .social-links ul li a:focus {
 /* ------------------------------------------------------------------- 
  * tab about - (_layout.css)  
  * ------------------------------------------------------------------- */
-
-
 @media only screen and (max-width: 2000px) {
     #tab-about {
-        min-width: 50rem;
-        padding: 10.2rem 0 9rem;
-        position: relative;
-        color: white;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    #tab-about {
-        padding: 10.2rem 0 9rem;
         position: relative;
         color: white;
     }
@@ -1733,9 +1731,25 @@ header .social-links ul li a:focus {
     margin-bottom: 1.8rem;
 }
 
+.row .row.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.halfWidth {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 10px;
+}
+
 @media only screen and (max-width: 768px) {
+    .halfWidth {
+        width: 100%;
+    }
 
     .row .row.about-content {
+        flex-direction: column;
         max-width: 600px;
         margin: 0 auto;
     }
@@ -2253,11 +2267,13 @@ footer .back-to-top a i {
 }
 
 .w3-progressbar {
+    overflow: hidden;
     animation: 2s cubic-bezier(.14, .96, .68, .96) 0s 1 slideInFromLeft;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    padding: 0 10px;
+    text-align: center;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
 }
 
 @keyframes slideInFromLeft {
