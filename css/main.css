@@ -1510,6 +1510,11 @@ header .social-links ul li a:focus {
     border: 1px solid rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
+#info .tabs-wrap ul.tabs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
 #info .tabs-wrap ul.tabs li:last-child {
     margin-right: 0;
@@ -1527,6 +1532,9 @@ header .social-links ul li a:focus {
 }
 
 @media only screen and (max-width: 768px) {
+    #info .tabs-wrap ul.tabs li {
+        font-size: 1.2rem;
+    }
     #info .tabs-wrap ul.tabs li.active {
         background: red;
         color: #ffffff;

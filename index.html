@@ -7,12 +7,25 @@
 	<!-- mobile specific metas
 	  ================================================== -->
 	<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'>
+	<meta content='#009688' name='theme-color'>
 	<title>Mohit Kumar Singh</title>
-	<meta content='IIT KANPUR' name='description'>
+
+	<!-- Short description of the document (limit to 150 characters) -->
+	<!-- This content *may* be used as a part of search engine results. -->
+	<meta content='Software Developer, IIT Kanpur Graduate.' name='description'>
 	<meta content='Mohit' name='author'>
 	<!-- Control the behavior of search engine crawling and indexing -->
 	<meta content='index,follow,noodp' name='robots'><!-- All Search Engines -->
 	<meta content='index,follow' name='googlebot'><!-- Google Specific -->
+	<meta content='IN' name='geo.region'>
+	<!-- Country code (ISO 3166-1): mandatory, state code (ISO 3166-2): optional; eg. content="US" / content="US-NY" -->
+	<meta content='Bangalore' name='geo.placename'><!-- eg. content="New York City" -->
+	<!--	Facebook open graph -->
+	<meta content='https://mohitks5.github.io' property='og:url'/>
+	<meta content='portfolio' property='og:type'/>
+	<meta content="Mohit Kumar Singh's Portfolio" property='og:title'/>
+	<meta content='Software Developer, IIT Kanpur Graduate.' property='og:description'/>
+	<meta content='https://mohitks5.github.io/images/homepage.jpg' property='og:image'/>
 	<!-- CSS
   ================================================== -->
 	<link href='css/base.css' rel='stylesheet'>
@@ -32,11 +45,14 @@
 <header>
 	<div class='row'>
 		<div class='logo'>
-			<div class="button" id="button-7">
-				<div id="dub-arrow">
-					<img src="https://github.com/atloomer/atloomer.github.io/blob/master/img/iconmonstr-arrow-48-240.png?raw=true" alt="" />
+			<div class='button' id='button-7'>
+				<div id='dub-arrow'>
+					<img
+							alt=''
+							src='https://github.com/atloomer/atloomer.github.io/blob/master/img/iconmonstr-arrow-48-240.png?raw=true'
+					/>
 				</div>
-				<a href="#">Change Theme</a>
+				<a href='#'>Change Theme</a>
 			</div>
 		</div>
 		<div class='social-links'>
@@ -54,7 +70,7 @@
 ================================================== -->
 <section id='home'>
 	<div id='home-background'>
-		<div class="home-particles"></div>
+		<div class='home-particles'></div>
 	</div>
 	<div class='shadow-overlay'></div>
 	<div class='content-wrap-table'>

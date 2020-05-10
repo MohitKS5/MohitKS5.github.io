@@ -34,6 +34,11 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="S:\MohitKS5.github.io\images" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -48,7 +53,7 @@
       <workItem from="1588944743533" duration="19812000" />
       <workItem from="1589018571201" duration="4827000" />
       <workItem from="1589090603084" duration="4739000" />
-      <workItem from="1589099143994" duration="487000" />
+      <workItem from="1589099143994" duration="1775000" />
     </task>
     <task id="LOCAL-00001" summary="clean useless page click.html">
       <created>1588956056284</created>
@@ -92,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589095098536</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="meta tags for the page">
+      <created>1589100540615</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589100540615</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,7 +116,8 @@
     <MESSAGE value="fix the form." />
     <MESSAGE value="a little mobile optimization" />
     <MESSAGE value="mobile responsive tabs" />
-    <option name="LAST_COMMIT_MESSAGE" value="mobile responsive tabs" />
+    <MESSAGE value="meta tags for the page" />
+    <option name="LAST_COMMIT_MESSAGE" value="meta tags for the page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588944834834">
@@ -119,14 +132,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="516" y="288" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.864@0.0.1536.864" timestamp="1589021311963" />
-    <state x="393" y="26" key="CommitChangelistDialog2" timestamp="1589095094370">
+    <state x="393" y="26" key="CommitChangelistDialog2" timestamp="1589100538395">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="393" y="26" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1589095094370" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1589095104374">
+    <state x="393" y="26" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1589100538395" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1589100544367">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1589095104374" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1589100544367" />
     <state x="93" y="93" width="1350" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588951574968">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
