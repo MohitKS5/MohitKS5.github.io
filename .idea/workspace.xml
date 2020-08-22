@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c1af97a8-755c-4a36-be9e-ecbdad080bb4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +52,7 @@
       <workItem from="1588944743533" duration="19812000" />
       <workItem from="1589018571201" duration="4827000" />
       <workItem from="1589090603084" duration="4739000" />
-      <workItem from="1589099143994" duration="1775000" />
+      <workItem from="1589099143994" duration="4252000" />
     </task>
     <task id="LOCAL-00001" summary="clean useless page click.html">
       <created>1588956056284</created>
@@ -144,5 +143,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="93" y="93" width="1350" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864@0.0.1536.864" timestamp="1588951574968" />
+    <state x="463" y="164" width="609" height="536" key="find.popup" timestamp="1589102212682">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="463" y="164" width="609" height="536" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1589102212682" />
   </component>
 </project>
