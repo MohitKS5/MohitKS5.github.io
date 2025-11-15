@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Couple silhouette with hearts -->
+  <defs>
+    <radialGradient id="heartGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FF69B4;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#DC143C;stop-opacity:0.4" />
+    </radialGradient>
+  </defs>
+
+  <!-- Glowing background circle -->
+  <circle cx="200" cy="200" r="180" fill="url(#heartGlow)" opacity="0.2"/>
+
+  <!-- Man silhouette (kneeling) -->
+  <g id="man">
+    <!-- Head -->
+    <circle cx="160" cy="140" r="25" fill="#5C0000"/>
+    <!-- Body -->
+    <ellipse cx="160" cy="200" rx="30" ry="45" fill="#5C0000"/>
+    <!-- Kneeling leg -->
+    <rect x="145" y="240" width="15" height="40" rx="8" fill="#5C0000"/>
+    <rect x="165" y="255" width="15" height="25" rx="8" fill="#5C0000" transform="rotate(-30 172 267)"/>
+    <!-- Arms -->
+    <rect x="130" y="180" width="12" height="35" rx="6" fill="#5C0000" transform="rotate(-20 136 197)"/>
+    <rect x="178" y="180" width="12" height="35" rx="6" fill="#5C0000" transform="rotate(45 184 197)"/>
+    <!-- Ring box -->
+    <rect x="185" y="200" width="15" height="10" rx="2" fill="#DC143C"/>
+    <circle cx="192" cy="198" r="3" fill="#FFD700"/>
+  </g>
+
+  <!-- Woman silhouette (standing) -->
+  <g id="woman">
+    <!-- Head -->
+    <circle cx="240" cy="150" r="25" fill="#8B0000"/>
+    <!-- Hair/ponytail -->
+    <ellipse cx="255" cy="140" rx="15" ry="20" fill="#8B0000"/>
+    <!-- Body/dress -->
+    <path d="M 240 175 Q 220 210, 210 260 L 270 260 Q 260 210, 240 175 Z" fill="#8B0000"/>
+    <!-- Arms -->
+    <rect x="215" y="185" width="12" height="30" rx="6" fill="#8B0000" transform="rotate(-40 221 200)"/>
+    <rect x="253" y="185" width="12" height="30" rx="6" fill="#8B0000" transform="rotate(40 259 200)"/>
+    <!-- Hand to mouth (surprised gesture) -->
+    <circle cx="210" cy="160" r="8" fill="#8B0000"/>
+  </g>
+
+  <!-- Floating hearts around couple -->
+  <g id="hearts" opacity="0.8">
+    <path d="M 100 120 Q 100 100, 115 100 Q 130 100, 130 120 Q 130 145, 100 165 Q 70 145, 70 120 Q 70 100, 85 100 Q 100 100, 100 120 Z" fill="#FF69B4">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="3s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M 320 180 Q 320 165, 332 165 Q 344 165, 344 180 Q 344 200, 320 215 Q 296 200, 296 180 Q 296 165, 308 165 Q 320 165, 320 180 Z" fill="#FFB6C1">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M 90 280 Q 90 268, 100 268 Q 110 268, 110 280 Q 110 295, 90 307 Q 70 295, 70 280 Q 70 268, 80 268 Q 90 268, 90 280 Z" fill="#FF1493">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-12; 0,0" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M 330 90 Q 330 78, 340 78 Q 350 78, 350 90 Q 350 105, 330 117 Q 310 105, 310 90 Q 310 78, 320 78 Q 330 78, 330 90 Z" fill="#DC143C">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-7; 0,0" dur="2.8s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Sparkles -->
+  <g id="sparkles">
+    <circle cx="280" cy="120" r="2" fill="#FFD700">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="250" r="2" fill="#FFD700">
+      <animate attributeName="opacity" values="0;1;0" dur="2.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="170" r="2" fill="#FFD700">
+      <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="240" r="2" fill="#FFD700">
+      <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

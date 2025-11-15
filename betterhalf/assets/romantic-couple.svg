@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF69B4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DC143C;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glowEffect" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFB6C1;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#FFB6C1;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Glowing background -->
+  <circle cx="250" cy="250" r="200" fill="url(#glowEffect)">
+    <animate attributeName="r" values="200;220;200" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Large decorative heart in background -->
+  <g opacity="0.15">
+    <path d="M250 180 Q250 140 280 140 Q310 140 310 170 Q310 200 250 260 Q190 200 190 170 Q190 140 220 140 Q250 140 250 180 Z" fill="#DC143C">
+      <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="3s" repeatCount="indefinite" additive="sum"/>
+    </path>
+  </g>
+
+  <!-- Man (on left, kneeling with ring) -->
+  <g id="man">
+    <!-- Legs (kneeling position) -->
+    <ellipse cx="180" cy="340" rx="18" ry="35" fill="#2C1810"/>
+    <ellipse cx="210" cy="355" rx="18" ry="28" fill="#2C1810" transform="rotate(-20 210 355)"/>
+
+    <!-- Body/Torso -->
+    <path d="M195 270 Q175 290 180 330 L180 340 Q180 342 195 342 Q210 342 210 340 L210 310 Q212 290 195 270 Z" fill="#3D2817"/>
+
+    <!-- Shirt collar -->
+    <path d="M188 275 L195 285 L202 275 Z" fill="#FFF" opacity="0.8"/>
+
+    <!-- Left arm (holding ring box) -->
+    <ellipse cx="165" cy="295" rx="12" ry="32" fill="#3D2817" transform="rotate(-25 165 295)"/>
+    <circle cx="158" cy="315" r="10" fill="#C9A27A"/>
+
+    <!-- Right arm extended with ring -->
+    <ellipse cx="225" cy="285" rx="12" ry="38" fill="#3D2817" transform="rotate(45 225 285)"/>
+    <circle cx="245" cy="305" r="10" fill="#C9A27A"/>
+
+    <!-- Ring box -->
+    <rect x="240" y="300" width="20" height="14" rx="2" fill="#8B0000"/>
+    <rect x="242" y="295" width="16" height="6" rx="1" fill="#DC143C"/>
+
+    <!-- Diamond ring sparkle -->
+    <circle cx="250" cy="295" r="4" fill="#FFD700">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <line x1="246" y1="295" x2="254" y2="295" stroke="#FFD700" stroke-width="1.5" opacity="0.8">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="250" y1="291" x2="250" y2="299" stroke="#FFD700" stroke-width="1.5" opacity="0.8">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Neck -->
+    <rect x="188" y="265" width="14" height="12" rx="3" fill="#C9A27A"/>
+
+    <!-- Head -->
+    <circle cx="195" cy="255" r="22" fill="#C9A27A"/>
+
+    <!-- Hair -->
+    <path d="M175 250 Q173 235 195 230 Q217 235 215 250 Z" fill="#2C1810"/>
+
+    <!-- Ear -->
+    <ellipse cx="217" cy="255" rx="4" ry="6" fill="#B8956A"/>
+
+    <!-- Eye -->
+    <circle cx="202" cy="253" r="2" fill="#2C1810"/>
+
+    <!-- Smile -->
+    <path d="M198 262 Q202 265 206 262" stroke="#2C1810" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Woman (on right, standing with hand on chest) -->
+  <g id="woman">
+    <!-- Dress/Skirt -->
+    <path d="M305 290 Q290 320 280 380 L280 385 Q280 390 305 390 Q330 390 330 385 L330 380 Q320 320 305 290 Z" fill="#DC143C"/>
+
+    <!-- Dress bodice -->
+    <path d="M305 250 Q295 265 298 285 L312 285 Q315 265 305 250 Z" fill="#8B0000"/>
+
+    <!-- Left arm (raised, hand near face - surprised) -->
+    <ellipse cx="280" cy="270" rx="10" ry="30" fill="#8B0000" transform="rotate(-35 280 270)"/>
+    <circle cx="268" cy="255" r="8" fill="#E6C9A8"/>
+
+    <!-- Right arm (at side) -->
+    <ellipse cx="330" cy="295" rx="10" ry="28" fill="#8B0000" transform="rotate(15 330 295)"/>
+    <circle cx="338" cy="318" r="8" fill="#E6C9A8"/>
+
+    <!-- Neck -->
+    <rect x="298" y="240" width="14" height="13" rx="3" fill="#E6C9A8"/>
+
+    <!-- Head -->
+    <circle cx="305" cy="230" r="24" fill="#E6C9A8"/>
+
+    <!-- Hair (long, flowing) -->
+    <ellipse cx="305" cy="218" rx="26" ry="28" fill="#3D2817"/>
+    <path d="M280 225 Q275 250 278 275" stroke="#3D2817" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <path d="M330 225 Q335 250 332 270" stroke="#3D2817" stroke-width="10" fill="none" stroke-linecap="round"/>
+
+    <!-- Ear -->
+    <ellipse cx="283" cy="230" rx="4" ry="6" fill="#D4B896"/>
+
+    <!-- Eyes -->
+    <circle cx="298" cy="228" r="2" fill="#2C1810"/>
+    <circle cx="296" cy="227" r="1" fill="#FFF"/>
+
+    <!-- Smile -->
+    <path d="M298 238 Q305 243 312 238" stroke="#2C1810" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Floating hearts around couple -->
+  <g id="floatingHearts">
+    <path d="M150 200 Q150 188 158 188 Q166 188 166 200 Q166 212 150 224 Q134 212 134 200 Q134 188 142 188 Q150 188 150 200 Z" fill="url(#heartGradient)" opacity="0.8">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -3,-8; 0,0" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M370 240 Q370 230 377 230 Q384 230 384 240 Q384 250 370 260 Q356 250 356 240 Q356 230 363 230 Q370 230 370 240 Z" fill="url(#heartGradient)" opacity="0.8">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 4,-10; 0,0" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.8s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M360 140 Q360 132 366 132 Q372 132 372 140 Q372 148 360 156 Q348 148 348 140 Q348 132 354 132 Q360 132 360 140 Z" fill="#FFB6C1" opacity="0.7">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-6; 0,0" dur="3.2s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M140 320 Q140 312 146 312 Q152 312 152 320 Q152 328 140 336 Q128 328 128 320 Q128 312 134 312 Q140 312 140 320 Z" fill="#DC143C" opacity="0.7">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -2,-7; 0,0" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Sparkles -->
+  <g id="sparkles">
+    <circle cx="270" cy="180" r="2.5" fill="#FFD700">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="340" cy="320" r="2.5" fill="#FFD700">
+      <animate attributeName="opacity" values="0;1;0" dur="2.3s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <circle cx="160" cy="280" r="2.5" fill="#FFD700">
+      <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite" begin="0.8s"/>
+    </circle>
+  </g>
+</svg>

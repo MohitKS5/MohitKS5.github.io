@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Cute couple holding hands illustration -->
+  <defs>
+    <linearGradient id="skinGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd5c8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f4b4a7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background hearts -->
+  <circle cx="80" cy="100" r="15" fill="#FFB6C1" opacity="0.3"/>
+  <circle cx="320" cy="120" r="20" fill="#DC143C" opacity="0.2"/>
+  <circle cx="350" cy="250" r="12" fill="#FF69B4" opacity="0.3"/>
+  <circle cx="50" cy="280" r="18" fill="#FFB6C1" opacity="0.3"/>
+
+  <!-- Boy (left side) -->
+  <g id="boy">
+    <!-- Body -->
+    <ellipse cx="140" cy="280" rx="35" ry="50" fill="#4A90E2"/>
+
+    <!-- Neck -->
+    <rect x="133" y="220" width="14" height="15" fill="url(#skinGradient)" rx="3"/>
+
+    <!-- Head -->
+    <circle cx="140" cy="200" r="30" fill="url(#skinGradient)"/>
+
+    <!-- Hair -->
+    <path d="M 110 195 Q 110 165 140 165 Q 170 165 170 195 Q 165 175 140 175 Q 115 175 110 195" fill="#2C3E50"/>
+
+    <!-- Eyes -->
+    <circle cx="130" cy="200" r="3" fill="#2C3E50"/>
+    <circle cx="150" cy="200" r="3" fill="#2C3E50"/>
+
+    <!-- Smile -->
+    <path d="M 130 210 Q 140 215 150 210" stroke="#2C3E50" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Arms -->
+    <ellipse cx="110" cy="270" rx="12" ry="35" fill="#4A90E2" transform="rotate(-20 110 270)"/>
+    <ellipse cx="170" cy="270" rx="12" ry="35" fill="#4A90E2" transform="rotate(20 170 270)"/>
+
+    <!-- Hands -->
+    <circle cx="105" cy="300" r="8" fill="url(#skinGradient)"/>
+    <circle cx="185" cy="295" r="8" fill="url(#skinGradient)"/>
+
+    <!-- Legs -->
+    <rect x="125" y="320" width="12" height="45" fill="#34495E" rx="6"/>
+    <rect x="143" y="320" width="12" height="45" fill="#34495E" rx="6"/>
+
+    <!-- Shoes -->
+    <ellipse cx="131" cy="365" rx="10" ry="6" fill="#2C3E50"/>
+    <ellipse cx="149" cy="365" rx="10" ry="6" fill="#2C3E50"/>
+  </g>
+
+  <!-- Girl (right side) -->
+  <g id="girl">
+    <!-- Body/Dress -->
+    <path d="M 260 240 L 220 330 L 300 330 L 260 240" fill="#DC143C"/>
+    <ellipse cx="260" cy="245" rx="35" ry="25" fill="#DC143C"/>
+
+    <!-- Neck -->
+    <rect x="253" y="220" width="14" height="15" fill="url(#skinGradient)" rx="3"/>
+
+    <!-- Head -->
+    <circle cx="260" cy="200" r="30" fill="url(#skinGradient)"/>
+
+    <!-- Hair -->
+    <path d="M 230 195 Q 230 160 260 160 Q 290 160 290 195" fill="#3E2723"/>
+    <ellipse cx="220" cy="210" rx="15" ry="25" fill="#3E2723"/>
+    <ellipse cx="300" cy="210" rx="15" ry="25" fill="#3E2723"/>
+
+    <!-- Eyes -->
+    <circle cx="250" cy="200" r="3" fill="#2C3E50"/>
+    <circle cx="270" cy="200" r="3" fill="#2C3E50"/>
+
+    <!-- Eyelashes -->
+    <line x1="247" y1="197" x2="245" y2="194" stroke="#2C3E50" stroke-width="1"/>
+    <line x1="253" y1="197" x2="255" y2="194" stroke="#2C3E50" stroke-width="1"/>
+    <line x1="267" y1="197" x2="265" y2="194" stroke="#2C3E50" stroke-width="1"/>
+    <line x1="273" y1="197" x2="275" y2="194" stroke="#2C3E50" stroke-width="1"/>
+
+    <!-- Smile -->
+    <path d="M 250 210 Q 260 215 270 210" stroke="#DC143C" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Blush -->
+    <circle cx="240" cy="205" r="5" fill="#FFB6C1" opacity="0.5"/>
+    <circle cx="280" cy="205" r="5" fill="#FFB6C1" opacity="0.5"/>
+
+    <!-- Arms -->
+    <ellipse cx="230" cy="270" rx="12" ry="35" fill="url(#skinGradient)" transform="rotate(-25 230 270)"/>
+    <ellipse cx="290" cy="270" rx="12" ry="35" fill="url(#skinGradient)" transform="rotate(25 290 270)"/>
+
+    <!-- Hands -->
+    <circle cx="215" cy="295" r="8" fill="url(#skinGradient)"/>
+    <circle cx="295" cy="300" r="8" fill="url(#skinGradient)"/>
+
+    <!-- Shoes -->
+    <ellipse cx="235" cy="330" rx="12" ry="7" fill="#8B0000"/>
+    <ellipse cx="285" cy="330" rx="12" ry="7" fill="#8B0000"/>
+  </g>
+
+  <!-- Holding hands connection -->
+  <line x1="185" y1="295" x2="215" y2="295" stroke="url(#skinGradient)" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Heart between them -->
+  <g transform="translate(200, 260)">
+    <path d="M 0,-5 C -15,-20, -30,-5, 0,15 C 30,-5, 15,-20, 0,-5 Z" fill="#FF1493" opacity="0.8"/>
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="scale"
+      values="1;1.2;1"
+      dur="1.5s"
+      repeatCount="indefinite"
+      additive="sum"/>
+  </g>
+
+  <!-- Sparkles -->
+  <g opacity="0.7">
+    <path d="M 100 150 L 102 155 L 107 157 L 102 159 L 100 164 L 98 159 L 93 157 L 98 155 Z" fill="#FFD700">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 330 180 L 332 185 L 337 187 L 332 189 L 330 194 L 328 189 L 323 187 L 328 185 Z" fill="#FFD700">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 70 320 L 72 323 L 75 325 L 72 327 L 70 330 L 68 327 L 65 325 L 68 323 Z" fill="#FFD700">
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.8s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

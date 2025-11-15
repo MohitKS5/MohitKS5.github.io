@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <!-- Bouquet wrapper -->
+  <g id="bouquet">
+    <!-- Stems -->
+    <line x1="100" y1="150" x2="90" y2="280" stroke="#2d5016" stroke-width="3"/>
+    <line x1="100" y1="160" x2="100" y2="280" stroke="#2d5016" stroke-width="3"/>
+    <line x1="100" y1="155" x2="110" y2="280" stroke="#2d5016" stroke-width="3"/>
+    <line x1="85" y1="170" x2="80" y2="280" stroke="#2d5016" stroke-width="2.5"/>
+    <line x1="115" y1="165" x2="120" y2="280" stroke="#2d5016" stroke-width="2.5"/>
+
+    <!-- Leaves -->
+    <ellipse cx="95" cy="200" rx="8" ry="15" fill="#4a7c2c" transform="rotate(-30 95 200)"/>
+    <ellipse cx="105" cy="210" rx="8" ry="15" fill="#4a7c2c" transform="rotate(30 105 210)"/>
+    <ellipse cx="88" cy="220" rx="7" ry="13" fill="#4a7c2c" transform="rotate(-25 88 220)"/>
+    <ellipse cx="112" cy="225" rx="7" ry="13" fill="#4a7c2c" transform="rotate(25 112 225)"/>
+
+    <!-- Ribbon/Bow -->
+    <path d="M 70 270 Q 100 265 130 270" stroke="#FFD700" stroke-width="15" fill="none"/>
+    <path d="M 75 270 Q 60 260 55 275 Q 60 265 75 270" fill="#FFD700"/>
+    <path d="M 125 270 Q 140 260 145 275 Q 140 265 125 270" fill="#FFD700"/>
+
+    <!-- Red Roses -->
+    <!-- Center Rose 1 -->
+    <g transform="translate(100, 100)">
+      <circle cx="0" cy="0" r="20" fill="#DC143C"/>
+      <circle cx="-8" cy="-8" r="10" fill="#8B0000"/>
+      <circle cx="8" cy="-8" r="10" fill="#8B0000"/>
+      <circle cx="-8" cy="8" r="10" fill="#8B0000"/>
+      <circle cx="8" cy="8" r="10" fill="#8B0000"/>
+      <circle cx="0" cy="0" r="8" fill="#5C0000"/>
+    </g>
+
+    <!-- Left Rose -->
+    <g transform="translate(70, 120)">
+      <circle cx="0" cy="0" r="18" fill="#DC143C"/>
+      <circle cx="-7" cy="-7" r="9" fill="#8B0000"/>
+      <circle cx="7" cy="-7" r="9" fill="#8B0000"/>
+      <circle cx="-7" cy="7" r="9" fill="#8B0000"/>
+      <circle cx="7" cy="7" r="9" fill="#8B0000"/>
+      <circle cx="0" cy="0" r="7" fill="#5C0000"/>
+    </g>
+
+    <!-- Right Rose -->
+    <g transform="translate(130, 115)">
+      <circle cx="0" cy="0" r="18" fill="#DC143C"/>
+      <circle cx="-7" cy="-7" r="9" fill="#8B0000"/>
+      <circle cx="7" cy="-7" r="9" fill="#8B0000"/>
+      <circle cx="-7" cy="7" r="9" fill="#8B0000"/>
+      <circle cx="7" cy="7" r="9" fill="#8B0000"/>
+      <circle cx="0" cy="0" r="7" fill="#5C0000"/>
+    </g>
+
+    <!-- Top Rose -->
+    <g transform="translate(100, 70)">
+      <circle cx="0" cy="0" r="17" fill="#DC143C"/>
+      <circle cx="-6" cy="-6" r="8" fill="#8B0000"/>
+      <circle cx="6" cy="-6" r="8" fill="#8B0000"/>
+      <circle cx="-6" cy="6" r="8" fill="#8B0000"/>
+      <circle cx="6" cy="6" r="8" fill="#8B0000"/>
+      <circle cx="0" cy="0" r="6" fill="#5C0000"/>
+    </g>
+
+    <!-- Back Left Rose -->
+    <g transform="translate(55, 140)">
+      <circle cx="0" cy="0" r="16" fill="#DC143C"/>
+      <circle cx="-6" cy="-6" r="8" fill="#8B0000"/>
+      <circle cx="6" cy="-6" r="8" fill="#8B0000"/>
+      <circle cx="-6" cy="6" r="8" fill="#8B0000"/>
+      <circle cx="6" cy="6" r="8" fill="#8B0000"/>
+      <circle cx="0" cy="0" r="6" fill="#5C0000"/>
+    </g>
+
+    <!-- Back Right Rose -->
+    <g transform="translate(145, 135)">
+      <circle cx="0" cy="0" r="16" fill="#DC143C"/>
+      <circle cx="-6" cy="-6" r="8" fill="#8B0000"/>
+      <circle cx="6" cy="-6" r="8" fill="#8B0000"/>
+      <circle cx="-6" cy="6" r="8" fill="#8B0000"/>
+      <circle cx="6" cy="6" r="8" fill="#8B0000"/>
+      <circle cx="0" cy="0" r="6" fill="#5C0000"/>
+    </g>
+
+    <!-- Small accent roses -->
+    <g transform="translate(85, 90)">
+      <circle cx="0" cy="0" r="14" fill="#DC143C"/>
+      <circle cx="-5" cy="-5" r="7" fill="#8B0000"/>
+      <circle cx="5" cy="-5" r="7" fill="#8B0000"/>
+      <circle cx="-5" cy="5" r="7" fill="#8B0000"/>
+      <circle cx="5" cy="5" r="7" fill="#8B0000"/>
+      <circle cx="0" cy="0" r="5" fill="#5C0000"/>
+    </g>
+
+    <g transform="translate(115, 88)">
+      <circle cx="0" cy="0" r="14" fill="#DC143C"/>
+      <circle cx="-5" cy="-5" r="7" fill="#8B0000"/>
+      <circle cx="5" cy="-5" r="7" fill="#8B0000"/>
+      <circle cx="-5" cy="5" r="7" fill="#8B0000"/>
+      <circle cx="5" cy="5" r="7" fill="#8B0000"/>
+      <circle cx="0" cy="0" r="5" fill="#5C0000"/>
+    </g>
+  </g>
+</svg>

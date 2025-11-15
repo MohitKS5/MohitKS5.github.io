@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Something Special ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating hearts background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Image zoom overlay -->
+    <div class="image-zoom-overlay" id="imageZoomOverlay">
+        <div class="image-zoom-container">
+            <button class="image-zoom-close" id="closeZoom">×</button>
+            <img src="" alt="Zoomed image" class="image-zoom-img" id="zoomedImage">
+        </div>
+    </div>
+
+    <!-- Main container -->
+    <div class="container">
+        <!-- Hero section -->
+        <section class="hero-section" id="heroSection">
+            <div class="hero-content">
+                <div class="bouquet-container">
+                    <img src="assets/rose-bouquet-detailed.svg" alt="Rose Bouquet" class="bouquet-image">
+                </div>
+                <h1 class="glitch" id="heroTitle">Hey There!</h1>
+                <p class="subtitle fade-in">I have something special to tell you...</p>
+                <button class="btn-start" id="startBtn">
+                    <span>Let's start 💝</span>
+                    <span class="heart-icon">❤️</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Quotes with Photos section - One per page -->
+        <section class="quotes-section hidden" id="quotesSection">
+            <!-- Single quote-photo card displayed at a time -->
+            <div class="single-quote-container" id="singleQuoteContainer">
+                <!-- Current quote with photo will be displayed here -->
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="quote-navigation">
+                <button class="btn-next" id="nextQuoteBtn" style="display: none;">Show me more ✨</button>
+                <button class="btn-next" id="continueToPoetry" style="display: none;">Take me ahead 💖</button>
+            </div>
+
+            <!-- Progress dots -->
+            <div class="quote-progress" id="quoteProgress"></div>
+        </section>
+
+        <!-- Poetry section -->
+        <section class="poetry-section hidden" id="poetrySection">
+            <div class="poetry-container" id="poetryContainer">
+                <!-- Poetry verses will be dynamically inserted here -->
+            </div>
+            <button class="btn-next" id="nextToProposal">Take me ahead 💖</button>
+        </section>
+
+        <!-- Final In-Person Proposal section -->
+        <section class="proposal-section hidden" id="proposalSection">
+            <div class="proposal-content">
+                <div class="proposal-rings-container">
+                    <img src="assets/love-rings.svg" alt="Love Rings" class="love-rings-image">
+                </div>
+                <div class="proposal-couple-container">
+                    <img src="assets/romantic-couple.svg" alt="Proposal Couple" class="proposal-couple-image">
+                </div>
+                <div class="proposal-message-card">
+                    <div class="sparkle-decoration">✨</div>
+                    <h2 class="proposal-title" id="finalMessage"></h2>
+                    <p class="recital-prompt" id="recitalPrompt"></p>
+                    <div class="sparkle-decoration sparkle-right">✨</div>
+                </div>
+                <div class="hearts-animation">
+                    <span class="heart-beat">❤️</span>
+                    <span class="heart-beat">💕</span>
+                    <span class="heart-beat">💖</span>
+                    <span class="heart-beat">💕</span>
+                    <span class="heart-beat">❤️</span>
+                </div>
+                <div class="proposal-footer">
+                    <p class="footer-text">Every moment with you is a beautiful memory ✨</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

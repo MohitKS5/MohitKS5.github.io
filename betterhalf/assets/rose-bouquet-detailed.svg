@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <defs>
+    <radialGradient id="roseRed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FF1493;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#DC143C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B0000;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="rosePink" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FF69B4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#DC143C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C71585;stop-opacity:1" />
+    </radialGradient>
+
+    <linearGradient id="stemGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3d6b2f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5016;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="ribbonGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Stems and leaves group -->
+  <g id="stems">
+    <!-- Main stems -->
+    <path d="M 150,160 Q 145,250 140,370" stroke="url(#stemGrad)" stroke-width="4" fill="none"/>
+    <path d="M 150,165 Q 150,250 150,370" stroke="url(#stemGrad)" stroke-width="4" fill="none"/>
+    <path d="M 150,170 Q 155,250 160,370" stroke="url(#stemGrad)" stroke-width="4" fill="none"/>
+    <path d="M 130,185 Q 120,260 110,370" stroke="url(#stemGrad)" stroke-width="3.5" fill="none"/>
+    <path d="M 170,180 Q 180,260 190,370" stroke="url(#stemGrad)" stroke-width="3.5" fill="none"/>
+    <path d="M 115,200 Q 105,270 95,370" stroke="url(#stemGrad)" stroke-width="3" fill="none"/>
+    <path d="M 185,195 Q 195,270 205,370" stroke="url(#stemGrad)" stroke-width="3" fill="none"/>
+
+    <!-- Leaves scattered on stems -->
+    <ellipse cx="145" cy="220" rx="8" ry="16" fill="#4a7c2c" transform="rotate(-35 145 220)"/>
+    <ellipse cx="155" cy="230" rx="8" ry="16" fill="#4a7c2c" transform="rotate(35 155 230)"/>
+    <ellipse cx="138" cy="260" rx="7" ry="14" fill="#3d6b2f" transform="rotate(-40 138 260)"/>
+    <ellipse cx="162" cy="265" rx="7" ry="14" fill="#3d6b2f" transform="rotate(40 162 265)"/>
+    <ellipse cx="125" cy="240" rx="7" ry="13" fill="#4a7c2c" transform="rotate(-30 125 240)"/>
+    <ellipse cx="175" cy="245" rx="7" ry="13" fill="#4a7c2c" transform="rotate(30 175 245)"/>
+    <ellipse cx="110" cy="280" rx="6" ry="12" fill="#3d6b2f" transform="rotate(-35 110 280)"/>
+    <ellipse cx="190" cy="285" rx="6" ry="12" fill="#3d6b2f" transform="rotate(35 190 285)"/>
+    <ellipse cx="142" cy="300" rx="6" ry="12" fill="#4a7c2c" transform="rotate(-25 142 300)"/>
+    <ellipse cx="158" cy="305" rx="6" ry="12" fill="#4a7c2c" transform="rotate(25 158 305)"/>
+  </g>
+
+  <!-- Ribbon wrapping -->
+  <g id="ribbon">
+    <path d="M 90,350 Q 150,345 210,350" stroke="url(#ribbonGold)" stroke-width="20" fill="none" stroke-linecap="round"/>
+    <path d="M 90,350 Q 150,355 210,350" stroke="url(#ribbonGold)" stroke-width="18" fill="none" stroke-linecap="round"/>
+
+    <!-- Ribbon bow left side -->
+    <path d="M 95,350 Q 60,335 50,360 Q 55,340 70,340 Q 85,340 95,350" fill="url(#ribbonGold)" stroke="#DAA520" stroke-width="1"/>
+    <ellipse cx="75" cy="345" rx="12" ry="8" fill="#FFA500" transform="rotate(-20 75 345)"/>
+
+    <!-- Ribbon bow right side -->
+    <path d="M 205,350 Q 240,335 250,360 Q 245,340 230,340 Q 215,340 205,350" fill="url(#ribbonGold)" stroke="#DAA520" stroke-width="1"/>
+    <ellipse cx="225" cy="345" rx="12" ry="8" fill="#FFA500" transform="rotate(20 225 345)"/>
+
+    <!-- Ribbon center knot -->
+    <circle cx="150" cy="350" r="10" fill="url(#ribbonGold)" stroke="#DAA520" stroke-width="1"/>
+  </g>
+
+  <!-- Roses - layered from back to front -->
+
+  <!-- Back layer roses (smaller, partially hidden) -->
+  <!-- Back left rose -->
+  <g transform="translate(90, 150)">
+    <circle cx="0" cy="0" r="22" fill="url(#rosePink)" opacity="0.9"/>
+    <circle cx="-8" cy="-8" r="11" fill="#DC143C"/>
+    <circle cx="8" cy="-8" r="11" fill="#DC143C"/>
+    <circle cx="-8" cy="8" r="11" fill="#DC143C"/>
+    <circle cx="8" cy="8" r="11" fill="#DC143C"/>
+    <circle cx="0" cy="0" r="8" fill="#8B0000"/>
+    <circle cx="0" cy="0" r="4" fill="#5C0000"/>
+  </g>
+
+  <!-- Back right rose -->
+  <g transform="translate(210, 145)">
+    <circle cx="0" cy="0" r="22" fill="url(#roseRed)" opacity="0.9"/>
+    <circle cx="-8" cy="-8" r="11" fill="#DC143C"/>
+    <circle cx="8" cy="-8" r="11" fill="#DC143C"/>
+    <circle cx="-8" cy="8" r="11" fill="#DC143C"/>
+    <circle cx="8" cy="8" r="11" fill="#DC143C"/>
+    <circle cx="0" cy="0" r="8" fill="#8B0000"/>
+    <circle cx="0" cy="0" r="4" fill="#5C0000"/>
+  </g>
+
+  <!-- Back center top -->
+  <g transform="translate(150, 100)">
+    <circle cx="0" cy="0" r="20" fill="url(#rosePink)" opacity="0.9"/>
+    <circle cx="-7" cy="-7" r="10" fill="#DC143C"/>
+    <circle cx="7" cy="-7" r="10" fill="#DC143C"/>
+    <circle cx="-7" cy="7" r="10" fill="#DC143C"/>
+    <circle cx="7" cy="7" r="10" fill="#DC143C"/>
+    <circle cx="0" cy="0" r="7" fill="#8B0000"/>
+    <circle cx="0" cy="0" r="3" fill="#5C0000"/>
+  </g>
+
+  <!-- Middle layer roses -->
+  <!-- Left rose -->
+  <g transform="translate(115, 130)">
+    <circle cx="0" cy="0" r="25" fill="url(#roseRed)"/>
+    <circle cx="-9" cy="-9" r="12" fill="#DC143C"/>
+    <circle cx="9" cy="-9" r="12" fill="#DC143C"/>
+    <circle cx="-9" cy="9" r="12" fill="#DC143C"/>
+    <circle cx="9" cy="9" r="12" fill="#DC143C"/>
+    <circle cx="0" cy="0" r="9" fill="#8B0000"/>
+    <circle cx="0" cy="0" r="5" fill="#5C0000"/>
+    <!-- Highlight -->
+    <ellipse cx="-5" cy="-8" rx="4" ry="3" fill="#FF1493" opacity="0.5"/>
+  </g>
+
+  <!-- Right rose -->
+  <g transform="translate(185, 125)">
+    <circle cx="0" cy="0" r="25" fill="url(#rosePink)"/>
+    <circle cx="-9" cy="-9" r="12" fill="#DC143C"/>
+    <circle cx="9" cy="-9" r="12" fill="#DC143C"/>
+    <circle cx="-9" cy="9" r="12" fill="#DC143C"/>
+    <circle cx="9" cy="9" r="12" fill="#DC143C"/>
+    <circle cx="0" cy="0" r="9" fill="#8B0000"/>
+    <circle cx="0" cy="0" r="5" fill="#5C0000"/>
+    <!-- Highlight -->
+    <ellipse cx="-5" cy="-8" rx="4" ry="3" fill="#FF69B4" opacity="0.5"/>
+  </g>
+
+  <!-- Front layer roses (largest, most prominent) -->
+  <!-- Center main rose -->
+  <g transform="translate(150, 140)">
+    <circle cx="0" cy="0" r="30" fill="url(#roseRed)"/>
+    <circle cx="-11" cy="-11" r="14" fill="#DC143C"/>
+    <circle cx="11" cy="-11" r="14" fill="#DC143C"/>
+    <circle cx="-11" cy="11" r="14" fill="#DC143C"/>
+    <circle cx="11" cy="11" r="14" fill="#DC143C"/>
+    <circle cx="0" cy="0" r="11" fill="#8B0000"/>
+    <circle cx="0" cy="0" r="6" fill="#5C0000"/>
+    <!-- Highlight -->
+    <ellipse cx="-6" cy="-10" rx="5" ry="4" fill="#FF1493" opacity="0.6"/>
+  </g>
+
+  <!-- Small accent roses -->
+  <g transform="translate(130, 110)">
+    <circle cx="0" cy="0" r="18" fill="url(#rosePink)"/>
+    <circle cx="-6" cy="-6" r="9" fill="#DC143C"/>
+    <circle cx="6" cy="-6" r="9" fill="#DC143C"/>
+    <circle cx="-6" cy="6" r="9" fill="#DC143C"/>
+    <circle cx="6" cy="6" r="9" fill="#DC143C"/>
+    <circle cx="0" cy="0" r="6" fill="#8B0000"/>
+    <circle cx="0" cy="0" r="3" fill="#5C0000"/>
+  </g>
+
+  <g transform="translate(170, 115)">
+    <circle cx="0" cy="0" r="18" fill="url(#roseRed)"/>
+    <circle cx="-6" cy="-6" r="9" fill="#DC143C"/>
+    <circle cx="6" cy="-6" r="9" fill="#DC143C"/>
+    <circle cx="-6" cy="6" r="9" fill="#DC143C"/>
+    <circle cx="6" cy="6" r="9" fill="#DC143C"/>
+    <circle cx="0" cy="0" r="6" fill="#8B0000"/>
+    <circle cx="0" cy="0" r="3" fill="#5C0000"/>
+  </g>
+
+  <!-- Front accent roses -->
+  <g transform="translate(100, 170)">
+    <circle cx="0" cy="0" r="20" fill="url(#roseRed)"/>
+    <circle cx="-7" cy="-7" r="10" fill="#DC143C"/>
+    <circle cx="7" cy="-7" r="10" fill="#DC143C"/>
+    <circle cx="-7" cy="7" r="10" fill="#DC143C"/>
+    <circle cx="7" cy="7" r="10" fill="#DC143C"/>
+    <circle cx="0" cy="0" r="7" fill="#8B0000"/>
+    <circle cx="0" cy="0" r="3" fill="#5C0000"/>
+  </g>
+
+  <g transform="translate(200, 165)">
+    <circle cx="0" cy="0" r="20" fill="url(#rosePink)"/>
+    <circle cx="-7" cy="-7" r="10" fill="#DC143C"/>
+    <circle cx="7" cy="-7" r="10" fill="#DC143C"/>
+    <circle cx="-7" cy="7" r="10" fill="#DC143C"/>
+    <circle cx="7" cy="7" r="10" fill="#DC143C"/>
+    <circle cx="0" cy="0" r="7" fill="#8B0000"/>
+    <circle cx="0" cy="0" r="3" fill="#5C0000"/>
+  </g>
+
+  <!-- Additional filler roses -->
+  <g transform="translate(140, 175)">
+    <circle cx="0" cy="0" r="16" fill="url(#roseRed)" opacity="0.95"/>
+    <circle cx="-6" cy="-6" r="8" fill="#DC143C"/>
+    <circle cx="6" cy="-6" r="8" fill="#DC143C"/>
+    <circle cx="-6" cy="6" r="8" fill="#DC143C"/>
+    <circle cx="6" cy="6" r="8" fill="#DC143C"/>
+    <circle cx="0" cy="0" r="5" fill="#8B0000"/>
+  </g>
+
+  <g transform="translate(160, 172)">
+    <circle cx="0" cy="0" r="16" fill="url(#rosePink)" opacity="0.95"/>
+    <circle cx="-6" cy="-6" r="8" fill="#DC143C"/>
+    <circle cx="6" cy="-6" r="8" fill="#DC143C"/>
+    <circle cx="-6" cy="6" r="8" fill="#DC143C"/>
+    <circle cx="6" cy="6" r="8" fill="#DC143C"/>
+    <circle cx="0" cy="0" r="5" fill="#8B0000"/>
+  </g>
+
+  <!-- Baby's breath / filler flowers (small white flowers) -->
+  <g fill="white" opacity="0.9">
+    <circle cx="80" cy="160" r="3"/>
+    <circle cx="85" cy="155" r="2.5"/>
+    <circle cx="78" cy="167" r="2"/>
+    <circle cx="220" cy="158" r="3"/>
+    <circle cx="215" cy="152" r="2.5"/>
+    <circle cx="222" cy="165" r="2"/>
+    <circle cx="125" cy="95" r="2"/>
+    <circle cx="175" cy="98" r="2"/>
+    <circle cx="120" cy="185" r="2.5"/>
+    <circle cx="180" cy="183" r="2.5"/>
+  </g>
+</svg>

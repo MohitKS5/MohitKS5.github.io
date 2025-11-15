@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs>
+    <radialGradient id="diamondGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0" />
+    </radialGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="50%" style="stop-color:#FFA500"/>
+      <stop offset="100%" style="stop-color:#FFD700"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Two interlocked rings -->
+  <g id="rings">
+    <!-- Left ring -->
+    <circle cx="120" cy="150" r="60" fill="none" stroke="url(#goldGradient)" stroke-width="12" opacity="0.9">
+      <animateTransform attributeName="transform" type="rotate" from="0 120 150" to="360 120 150" dur="20s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="150" r="50" fill="none" stroke="#FFE4B5" stroke-width="2" opacity="0.6"/>
+
+    <!-- Right ring (overlapping) -->
+    <circle cx="180" cy="150" r="60" fill="none" stroke="url(#goldGradient)" stroke-width="12" opacity="0.9">
+      <animateTransform attributeName="transform" type="rotate" from="0 180 150" to="-360 180 150" dur="20s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="150" r="50" fill="none" stroke="#FFE4B5" stroke-width="2" opacity="0.6"/>
+
+    <!-- Diamond on left ring -->
+    <g transform="translate(120, 90)">
+      <polygon points="0,-15 -8,0 0,15 8,0" fill="#FFD700">
+        <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="2s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="0,-10 -5,0 0,10 5,0" fill="#FFF" opacity="0.8"/>
+      <circle cx="0" cy="0" r="20" fill="url(#diamondGlow)" opacity="0.4">
+        <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Diamond on right ring -->
+    <g transform="translate(180, 90)">
+      <polygon points="0,-15 -8,0 0,15 8,0" fill="#FFD700">
+        <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="0,-10 -5,0 0,10 5,0" fill="#FFF" opacity="0.8"/>
+      <circle cx="0" cy="0" r="20" fill="url(#diamondGlow)" opacity="0.4">
+        <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Floating hearts around rings -->
+  <g id="hearts">
+    <path d="M 50 100 Q 50 90, 57 90 Q 64 90, 64 100 Q 64 112, 50 122 Q 36 112, 36 100 Q 36 90, 43 90 Q 50 90, 50 100 Z" fill="#FF69B4" opacity="0.7">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -5,-10; 0,0" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="3s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M 250 180 Q 250 170, 257 170 Q 264 170, 264 180 Q 264 192, 250 202 Q 236 192, 236 180 Q 236 170, 243 170 Q 250 170, 250 180 Z" fill="#FFB6C1" opacity="0.7">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 5,-8; 0,0" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M 150 240 Q 150 232, 156 232 Q 162 232, 162 240 Q 162 250, 150 258 Q 138 250, 138 240 Q 138 232, 144 232 Q 150 232, 150 240 Z" fill="#DC143C" opacity="0.7">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-12; 0,0" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Sparkle effects -->
+  <g id="sparkles">
+    <line x1="145" y1="145" x2="155" y2="155" stroke="#FFD700" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="155" y1="145" x2="145" y2="155" stroke="#FFD700" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+</svg>
