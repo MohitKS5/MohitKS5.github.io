@@ -14,6 +14,7 @@ const CONFIG = {
       {
           id: 0,
           text: "Dastaan shuru hui iss tasweer se, khoobsoorat muskan, killer pose and the confidence in Ghagra uff...",
+          songLine: "Ek Ladki Ko Dekha To Aisa Laga\nJaise Khilta Gulab \nJaise Shayar ka Khwab",
           image: "pics/bio.JPG",
           caption: "",  // Add caption if you want
           buttonText: "Show me more ✨",  // Button text for this quote
@@ -21,7 +22,8 @@ const CONFIG = {
       },
     {
       id: 2,
-      text: "Chahe hazaar baithe ho saamne, nazrein sirf tmhe hi dhundhti hai",
+      text: "Bheed mein bhi meri nazar sirf tumhe hi dhoondti hai",
+      songLine: "O bekhabar, o bekadar, betabiyan\n bechainiyan hain jawaan\nMeri nazar dhoondhe tujhe tu kahaan",
       image: "pics/search.JPG",
       caption: "",  // Add caption if you want
       buttonText: "Show me more ✨",  // Button text for this quote
@@ -30,6 +32,7 @@ const CONFIG = {
       {
           id: 1,
           text: "Koi kehta tareef km karte hain, dhyaan se suno to har gaze, har saans me ek sifaat sunai degi",
+          songLine: "Khuda bhi jab tumhe, Mere paas dekhta hoga\nItni anmol cheez, De di kaise, sochta hoga!",
           image: "pics/bday.JPG",
           caption: "",  // Add caption if you want
           buttonText: "Awww...  ✨",  // Button text for this quote
@@ -38,6 +41,7 @@ const CONFIG = {
     {
       id: 3,
       text: "The only buzz I don't want to mute my phone. My favourite notification...",
+      songLine: "Chaahe tum kuchh na kaho maine sun liya\nKi saathi pyaar ka mujhe chun liya",
       image: "pics/wa.PNG",
       caption: "",  // Add caption if you want
       buttonText: "Show me more ✨",  // Button text for this quote
@@ -46,6 +50,7 @@ const CONFIG = {
       {
           id: 4,
           text: "Its like a dream come true... Happily Ever After ❤️",
+          songLine: "Tum paas aaye, yun muskuraye,\ntumne na jaane kya sapne dikhaye",
           image: "pics/togetha.JPG",
           caption: "",  // Add caption if you want
           buttonText: "Take me ahead 💖",  // Button text for last quote
@@ -72,7 +77,7 @@ const CONFIG = {
 
   // Final message before in-person proposal
   finalMessage: "You are my today and all of my tomorrows",
-  recitalPrompt: "Now look up",
+  recitalPrompt: "Now look at me Jaan",
 
   // Theme colors
   colors: {

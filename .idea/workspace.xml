@@ -8,8 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1af97a8-755c-4a36-be9e-ecbdad080bb4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/betterhalf/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/betterhalf/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterhalf/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/betterhalf/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/betterhalf/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/betterhalf/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +73,7 @@
       <workItem from="1589018571201" duration="4827000" />
       <workItem from="1589090603084" duration="4739000" />
       <workItem from="1589099143994" duration="4252000" />
-      <workItem from="1763663127741" duration="983000" />
+      <workItem from="1763663127741" duration="2459000" />
     </task>
     <task id="LOCAL-00001" summary="clean useless page click.html">
       <created>1588956056284</created>

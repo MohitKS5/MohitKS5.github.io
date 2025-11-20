@@ -102,6 +102,15 @@ function showQuote(index) {
     // Clear container
     container.innerHTML = '';
 
+    // Add Bollywood song line above card if present
+    if (item.songLine) {
+        const songLine = document.createElement('div');
+        songLine.className = 'bollywood-song-line';
+        // Replace \n with <br> for proper line breaks and wrap in music emojis
+        songLine.innerHTML = '🎵 ' + item.songLine.replace(/\n/g, '<br>') + ' 🎵';
+        container.appendChild(songLine);
+    }
+
     // Create card
     const card = document.createElement('div');
     card.className = 'quote-photo-card full-screen-quote';
