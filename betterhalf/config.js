@@ -55,14 +55,24 @@ const CONFIG = {
 
   // Your poetry section - add more verses or keep empty
   // These will show AFTER the quotes with photos section
-  poetry: [
-    // Add any additional poetry verses here if you want
-    // Leave empty array [] if you don't want a separate poetry section
-  ],
+  // Lines will appear one at a time on tap
+  poetry: {
+    preface: "It's said people start taking less risk when they have or about to have a family but in poetry we say,",
+    lines: [
+      "Ab raaston par bike thodi dheere chalane laga hoon,",
+      "Khai, kinaro se doori rakhne laga hoon, zara darne laga hoon",
+      "Jo jokhim bejijhak liya karta tha!",
+      "Zindagi se thodi zyada mohabbat karne laga hoon,",
+      "Ki koi hai jiske paas vapas jaana hai,",
+      "Kuchh tasvirein dikhani, kahaniyan bayan karni hain",
+      "Uski muskurahat banna hai, aasuon ka paigam nahi,",
+      "Ki koi hai jiske paas vapas jaana hai…"
+    ]
+  },
 
   // Final message before in-person proposal
-  finalMessage: "It's said people start taking less risk when they have or about to have a family but in poetry we say...",
-  recitalPrompt: "(Look ahead for recital)",
+  finalMessage: "You are my today and all of my tomorrows",
+  recitalPrompt: "Now look up",
 
   // Theme colors
   colors: {

@@ -4,6 +4,10 @@
 let currentQuoteIndex = 0;
 let quotesData = [];
 
+// Global state for poetry line-by-line reveal
+let currentPoetryLine = 0;
+let poetryTapHintTimeout = null;
+
 document.addEventListener('DOMContentLoaded', function() {
     // Apply theme colors from config
     applyThemeColors();
@@ -169,43 +173,140 @@ function updateProgressDots(activeIndex) {
 function loadPoetry() {
     const container = document.getElementById('poetryContainer');
 
-    // Sort by order
-    const sorted = [...CONFIG.poetry].sort((a, b) => a.order - b.order);
+    // Check if poetry exists and has lines
+    if (!CONFIG.poetry || !CONFIG.poetry.lines || CONFIG.poetry.lines.length === 0) {
+        return;
+    }
 
-    sorted.forEach((poem, index) => {
-        const card = document.createElement('div');
-        card.className = 'poetry-card';
-        card.style.animationDelay = (index * 0.2) + 's';
+    const card = document.createElement('div');
+    card.className = 'poetry-card';
 
-        // Verse text
-        const verse = document.createElement('p');
-        verse.className = 'poetry-verse';
-        verse.textContent = poem.verse;
+    // Add preface if provided
+    if (CONFIG.poetry.preface) {
+        const preface = document.createElement('p');
+        preface.className = 'poetry-preface';
+        preface.textContent = CONFIG.poetry.preface;
+        card.appendChild(preface);
+    }
 
-        card.appendChild(verse);
+    // Create verses container
+    const versesContainer = document.createElement('div');
+    versesContainer.className = 'poetry-verses';
+    versesContainer.id = 'poetryVersesContainer';
 
-        // Add image if provided
-        if (poem.image) {
-            const img = document.createElement('img');
-            img.className = 'poetry-image';
-            img.src = poem.image;
-            img.alt = poem.caption || 'Poetry image';
-            // Add zoom to poetry images too
-            img.addEventListener('click', () => openImageZoom(poem.image));
-            img.style.cursor = 'pointer';
-            card.appendChild(img);
+    // Pre-create all line elements (hidden initially)
+    CONFIG.poetry.lines.forEach((line, index) => {
+        const verseLine = document.createElement('p');
+        verseLine.className = 'poetry-verse-line';
+        // Add special class for last line
+        if (index === CONFIG.poetry.lines.length - 1) {
+            verseLine.classList.add('poetry-verse-last');
+        }
+        verseLine.textContent = line;
+        verseLine.style.display = 'none';
+        verseLine.setAttribute('data-line-index', index);
+        versesContainer.appendChild(verseLine);
+    });
 
-            // Caption (optional)
-            if (poem.caption) {
-                const caption = document.createElement('div');
-                caption.className = 'poetry-caption';
-                caption.textContent = poem.caption;
-                card.appendChild(caption);
-            }
+    card.appendChild(versesContainer);
+
+    // Add tap hint
+    const tapHint = document.createElement('div');
+    tapHint.className = 'poetry-tap-hint';
+    tapHint.id = 'poetryTapHint';
+    tapHint.innerHTML = '👆 Tap to continue';
+    card.appendChild(tapHint);
+
+    container.appendChild(card);
+
+    // Reset state
+    currentPoetryLine = 0;
+
+    // Make the entire poetry section clickable to reveal lines
+    const poetrySection = document.getElementById('poetrySection');
+    poetrySection.addEventListener('click', revealNextPoetryLine);
+
+    // Start the hint timeout
+    showPoetryTapHint();
+}
+
+// Reveal next poetry line on tap
+function revealNextPoetryLine(event) {
+    const lines = document.querySelectorAll('.poetry-verse-line');
+    const nextBtn = document.getElementById('nextToProposal');
+    const tapHint = document.getElementById('poetryTapHint');
+
+    // Hide tap hint on first tap
+    if (currentPoetryLine === 0 && tapHint) {
+        tapHint.style.display = 'none';
+    }
+
+    if (currentPoetryLine < lines.length) {
+        // Remove highlight from previous line
+        if (currentPoetryLine > 0) {
+            lines[currentPoetryLine - 1].classList.remove('poetry-line-highlight');
         }
 
-        container.appendChild(card);
-    });
+        const line = lines[currentPoetryLine];
+        line.style.display = 'block';
+        line.style.animation = 'fadeInUp 0.6s ease-out';
+
+        // Add highlight class to newly revealed line
+        line.classList.add('poetry-line-highlight');
+
+        currentPoetryLine++;
+
+        // Auto-scroll the card to bottom to show newly revealed line
+        const poetryCard = document.querySelector('.poetry-card');
+        if (poetryCard) {
+            setTimeout(() => {
+                poetryCard.scrollTo({
+                    top: poetryCard.scrollHeight,
+                    behavior: 'smooth'
+                });
+            }, 100);
+        }
+
+        // Clear existing timeout
+        if (poetryTapHintTimeout) {
+            clearTimeout(poetryTapHintTimeout);
+        }
+
+        // Set new timeout to show hint again if user is stuck
+        if (currentPoetryLine < lines.length) {
+            poetryTapHintTimeout = setTimeout(() => {
+                if (tapHint && currentPoetryLine < lines.length) {
+                    tapHint.style.display = 'block';
+                }
+            }, 4000); // Show hint after 4 seconds of inactivity
+        }
+
+        // Show button when all lines are revealed
+        if (currentPoetryLine === lines.length) {
+            // Remove highlight from last line
+            setTimeout(() => {
+                lines[currentPoetryLine - 1].classList.remove('poetry-line-highlight');
+            }, 1500);
+
+            setTimeout(() => {
+                nextBtn.style.display = 'block';
+                nextBtn.style.animation = 'fadeInUp 0.6s ease-out';
+                if (tapHint) {
+                    tapHint.style.display = 'none';
+                }
+            }, 500);
+        }
+    }
+}
+
+// Show poetry tap hint initially
+function showPoetryTapHint() {
+    const tapHint = document.getElementById('poetryTapHint');
+    if (tapHint) {
+        setTimeout(() => {
+            tapHint.style.display = 'block';
+        }, 1000); // Show after 1 second
+    }
 }
 
 // Setup event listeners
@@ -235,7 +336,7 @@ function setupEventListeners() {
     continueToPoetry.addEventListener('click', () => {
         hideSection('quotesSection');
         // Check if poetry exists
-        if (CONFIG.poetry && CONFIG.poetry.length > 0) {
+        if (CONFIG.poetry && CONFIG.poetry.lines && CONFIG.poetry.lines.length > 0) {
             showSection('poetrySection');
         } else {
             showSection('proposalSection');

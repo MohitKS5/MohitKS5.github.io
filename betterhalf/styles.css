@@ -366,16 +366,22 @@ section {
 /* Poetry Section */
 .poetry-section {
     min-height: 100vh;
-    padding: 60px 20px;
+    padding: 20px 20px 60px;
     position: relative;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
 }
 
 .poetry-container {
     display: grid;
     gap: 35px;
     max-width: 100%;
-    margin: 0 auto 50px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .poetry-card {
@@ -387,6 +393,40 @@ section {
     opacity: 0;
     animation: slideInUp 0.8s ease-out forwards;
     position: relative;
+    max-height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.poetry-preface {
+    font-size: 1rem;
+    color: var(--secondary);
+    line-height: 1.6;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--accent);
+}
+
+.poetry-verses {
+    margin-top: 20px;
+}
+
+.poetry-verse-line {
+    font-size: 1.15rem;
+    color: var(--dark);
+    line-height: 1.4;
+    font-family: 'Cormorant Garamond', 'Crimson Text', 'Georgia', serif;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.poetry-verse-line:empty {
+    margin-bottom: 15px;
 }
 
 .poetry-verse {
@@ -415,6 +455,48 @@ section {
     font-style: italic;
 }
 
+.poetry-line-highlight {
+    color: var(--primary);
+    font-weight: 600;
+    text-shadow: 0 0 20px rgba(220, 20, 60, 0.3);
+    transition: all 0.3s ease;
+}
+
+.poetry-tap-hint {
+    display: none;
+    text-align: center;
+    margin-top: 30px;
+    padding: 8px 16px;
+    background: rgba(220, 20, 60, 0.08);
+    color: var(--secondary);
+    border: 1px solid rgba(220, 20, 60, 0.2);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    animation: gentlePulse 3s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Proposal Section */
 .proposal-section {
     display: flex;
@@ -434,11 +516,13 @@ section {
 }
 
 .proposal-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--secondary);
     margin-bottom: 15px;
     text-shadow: 2px 2px 4px rgba(220, 20, 60, 0.3);
     line-height: 1.5;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
 }
 
 .recital-prompt {
