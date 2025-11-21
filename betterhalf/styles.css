@@ -411,6 +411,36 @@ section {
     transform: scale(0.95);
 }
 
+/* Hi Jaan message overlay */
+.hi-jaan-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FFF5F5 0%, #FFE4E1 50%, #FFF0F5 100%);
+    z-index: 10001;
+    justify-content: center;
+    align-items: center;
+}
+
+.hi-jaan-overlay.active {
+    display: flex;
+}
+
+.hi-jaan-message {
+    animation: fadeInScale 0.5s ease-out;
+}
+
+.hi-jaan-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: var(--secondary);
+    text-shadow: 3px 3px 10px rgba(220, 20, 60, 0.3);
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
 /* Image zoom modal */
 .image-zoom-overlay {
     display: none;

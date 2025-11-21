@@ -420,16 +420,30 @@ function validateAuth() {
     const errorMsg = document.getElementById('authError');
     const answer = input.value.trim();
 
-    if (answer === '08-11-25') {
-        // Correct answer - proceed to quotes section
+    // Lenient check - just verify 8, 11, and 25 exist in any order
+    const has8 = answer.includes('8');
+    const has11 = answer.includes('11');
+    const has25 = answer.includes('25');
+
+    if (has8 && has11 && has25) {
+        // Correct answer - show "Hi Jaan" message
         hideAuthModal();
-        hideSection('heroSection');
-        showSection('quotesSection');
-        scrollToTop();
 
         // Clear input for next time
         input.value = '';
         errorMsg.textContent = '';
+
+        // Show "Hi Jaan" message
+        const hiJaanOverlay = document.getElementById('hiJaanOverlay');
+        hiJaanOverlay.classList.add('active');
+
+        // After 2 seconds, hide message and show quotes section
+        setTimeout(() => {
+            hiJaanOverlay.classList.remove('active');
+            hideSection('heroSection');
+            showSection('quotesSection');
+            scrollToTop();
+        }, 2000);
     } else {
         // Wrong answer - show error
         errorMsg.textContent = 'That doesn\'t seem right... Try again 💕';
