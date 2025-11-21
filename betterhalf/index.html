@@ -15,6 +15,21 @@
     <!-- Floating hearts background -->
     <div class="hearts-container" id="heartsContainer"></div>
 
+    <!-- Authentication modal -->
+    <div class="auth-overlay" id="authOverlay">
+        <div class="auth-modal">
+            <h2 class="auth-title">Making sure you are the one</h2>
+            <p class="auth-question">When did we first meet?</p>
+            <input type="text"
+                   id="authInput"
+                   class="auth-input"
+                   placeholder="dd-mm-yy"
+                   maxlength="8">
+            <p class="auth-error" id="authError"></p>
+            <button class="auth-submit" id="authSubmit">Continue 💝</button>
+        </div>
+    </div>
+
     <!-- Image zoom overlay -->
     <div class="image-zoom-overlay" id="imageZoomOverlay">
         <div class="image-zoom-container">

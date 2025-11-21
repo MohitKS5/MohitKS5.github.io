@@ -326,12 +326,24 @@ function setupEventListeners() {
     const nextToProposal = document.getElementById('nextToProposal');
     const closeZoom = document.getElementById('closeZoom');
     const overlay = document.getElementById('imageZoomOverlay');
+    const authSubmit = document.getElementById('authSubmit');
+    const authInput = document.getElementById('authInput');
 
-    // Start button - show quotes section
+    // Start button - show authentication modal
     startBtn.addEventListener('click', () => {
-        hideSection('heroSection');
-        showSection('quotesSection');
-        scrollToTop();
+        showAuthModal();
+    });
+
+    // Authentication submit
+    authSubmit.addEventListener('click', () => {
+        validateAuth();
+    });
+
+    // Allow Enter key to submit authentication
+    authInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            validateAuth();
+        }
     });
 
     // Next quote button
@@ -383,6 +395,53 @@ function closeImageZoom() {
     const overlay = document.getElementById('imageZoomOverlay');
     overlay.classList.remove('active');
     document.body.style.overflow = '';
+}
+
+// Authentication functions
+function showAuthModal() {
+    const authOverlay = document.getElementById('authOverlay');
+    authOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // Focus on input
+    setTimeout(() => {
+        document.getElementById('authInput').focus();
+    }, 300);
+}
+
+function hideAuthModal() {
+    const authOverlay = document.getElementById('authOverlay');
+    authOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function validateAuth() {
+    const input = document.getElementById('authInput');
+    const errorMsg = document.getElementById('authError');
+    const answer = input.value.trim();
+
+    if (answer === '08-11-25') {
+        // Correct answer - proceed to quotes section
+        hideAuthModal();
+        hideSection('heroSection');
+        showSection('quotesSection');
+        scrollToTop();
+
+        // Clear input for next time
+        input.value = '';
+        errorMsg.textContent = '';
+    } else {
+        // Wrong answer - show error
+        errorMsg.textContent = 'That doesn\'t seem right... Try again 💕';
+        input.value = '';
+        input.focus();
+
+        // Shake animation
+        input.style.animation = 'none';
+        setTimeout(() => {
+            input.style.animation = 'shake 0.5s ease';
+        }, 10);
+    }
 }
 
 // Helper functions
