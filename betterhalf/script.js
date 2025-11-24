@@ -420,12 +420,12 @@ function validateAuth() {
     const errorMsg = document.getElementById('authError');
     const answer = input.value.trim();
 
-    // Lenient check - just verify 8, 11, and 25 exist in any order
-    const has8 = answer.includes('8');
+    // Lenient check - just verify 14, 11, and 25 exist in any order
+    const has14 = answer.includes('14');
     const has11 = answer.includes('11');
     const has25 = answer.includes('25');
 
-    if (has8 && has11 && has25) {
+    if (has14 && has11 && has25) {
         // Correct answer - show "Hi Jaan" message
         hideAuthModal();
 
